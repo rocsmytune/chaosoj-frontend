@@ -6,4 +6,3 @@
 export type PostFavourAddRequest = {
     postId?: number;
 };
-

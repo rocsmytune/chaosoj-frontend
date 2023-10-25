@@ -8,4 +8,3 @@ export type BaseResponse_int_ = {
     data?: number;
     message?: string;
 };
-

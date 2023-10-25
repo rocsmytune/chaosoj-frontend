@@ -18,4 +18,3 @@ export type Page_PostVO_ = {
     size?: number;
     total?: number;
 };
-

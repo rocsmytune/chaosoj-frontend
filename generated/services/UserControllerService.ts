@@ -31,8 +31,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static addUserUsingPost(
-        userAddRequest: UserAddRequest,
-    ): CancelablePromise<BaseResponse_long_ | any> {
+userAddRequest: UserAddRequest,
+): CancelablePromise<BaseResponse_long_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/add',
@@ -53,8 +53,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static deleteUserUsingPost(
-        deleteRequest: DeleteRequest,
-    ): CancelablePromise<BaseResponse_boolean_ | any> {
+deleteRequest: DeleteRequest,
+): CancelablePromise<BaseResponse_boolean_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/delete',
@@ -74,8 +74,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static getUserByIdUsingGet(
-        id?: number,
-    ): CancelablePromise<BaseResponse_User_> {
+id?: number,
+): CancelablePromise<BaseResponse_User_> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/api/user/get',
@@ -114,8 +114,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static getUserVoByIdUsingGet(
-        id?: number,
-    ): CancelablePromise<BaseResponse_UserVO_> {
+id?: number,
+): CancelablePromise<BaseResponse_UserVO_> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/api/user/get/vo',
@@ -138,8 +138,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static listUserByPageUsingPost(
-        userQueryRequest: UserQueryRequest,
-    ): CancelablePromise<BaseResponse_Page_User_ | any> {
+userQueryRequest: UserQueryRequest,
+): CancelablePromise<BaseResponse_Page_User_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/list/page',
@@ -160,8 +160,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static listUserVoByPageUsingPost(
-        userQueryRequest: UserQueryRequest,
-    ): CancelablePromise<BaseResponse_Page_UserVO_ | any> {
+userQueryRequest: UserQueryRequest,
+): CancelablePromise<BaseResponse_Page_UserVO_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/list/page/vo',
@@ -182,8 +182,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static userLoginUsingPost(
-        userLoginRequest: UserLoginRequest,
-    ): CancelablePromise<BaseResponse_LoginUserVO_ | any> {
+userLoginRequest: UserLoginRequest,
+): CancelablePromise<BaseResponse_LoginUserVO_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/login',
@@ -203,8 +203,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static userLoginByWxOpenUsingGet(
-        code: string,
-    ): CancelablePromise<BaseResponse_LoginUserVO_> {
+code: string,
+): CancelablePromise<BaseResponse_LoginUserVO_> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/api/user/login/wx_open',
@@ -245,8 +245,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static userRegisterUsingPost(
-        userRegisterRequest: UserRegisterRequest,
-    ): CancelablePromise<BaseResponse_long_ | any> {
+userRegisterRequest: UserRegisterRequest,
+): CancelablePromise<BaseResponse_long_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/register',
@@ -267,8 +267,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static updateUserUsingPost(
-        userUpdateRequest: UserUpdateRequest,
-    ): CancelablePromise<BaseResponse_boolean_ | any> {
+userUpdateRequest: UserUpdateRequest,
+): CancelablePromise<BaseResponse_boolean_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/update',
@@ -289,8 +289,8 @@ export class UserControllerService {
      * @throws ApiError
      */
     public static updateMyUserUsingPost(
-        userUpdateMyRequest: UserUpdateMyRequest,
-    ): CancelablePromise<BaseResponse_boolean_ | any> {
+userUpdateMyRequest: UserUpdateMyRequest,
+): CancelablePromise<BaseResponse_boolean_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/user/update/my',

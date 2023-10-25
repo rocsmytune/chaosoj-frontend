@@ -15,4 +15,3 @@ export type QuestionQueryRequest = {
     title?: string;
     userId?: number;
 };
-

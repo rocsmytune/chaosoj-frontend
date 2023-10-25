@@ -10,4 +10,3 @@ export type BaseResponse_Page_PostVO_ = {
     data?: Page_PostVO_;
     message?: string;
 };
-

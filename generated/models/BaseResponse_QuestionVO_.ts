@@ -10,4 +10,3 @@ export type BaseResponse_QuestionVO_ = {
     data?: QuestionVO;
     message?: string;
 };
-

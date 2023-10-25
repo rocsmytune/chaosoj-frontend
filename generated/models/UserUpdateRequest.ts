@@ -10,4 +10,3 @@ export type UserUpdateRequest = {
     userProfile?: string;
     userRole?: string;
 };
-

@@ -13,4 +13,3 @@ export type QuestionSubmitQueryRequest = {
     status?: number;
     userId?: number;
 };
-

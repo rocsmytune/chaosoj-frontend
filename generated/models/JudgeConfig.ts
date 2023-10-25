@@ -8,4 +8,3 @@ export type JudgeConfig = {
     stackLimit?: number;
     timeLimit?: number;
 };
-

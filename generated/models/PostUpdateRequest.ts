@@ -9,4 +9,3 @@ export type PostUpdateRequest = {
     tags?: Array<string>;
     title?: string;
 };
-
