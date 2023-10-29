@@ -21,10 +21,10 @@
       <a-form-item
         :rules="[
           { required: true, message: '密码不能为空' },
-          { minLength: 6, message: '密码长度不能低于六位' },
+          { minLength: 8, message: '密码长度不能低于八位' },
         ]"
         field="userPassword"
-        tooltip="密码不少于6位"
+        tooltip="密码不少于8位"
         label="密码 :"
       >
         <a-input-password
@@ -35,10 +35,10 @@
       <a-form-item
         :rules="[
           { required: true, message: '密码不能为空' },
-          { minLength: 6, message: '密码长度不能低于六位' },
+          { minLength: 8, message: '密码长度不能低于八位' },
         ]"
         field="checkPassword"
-        tooltip="密码不少于6位"
+        tooltip="密码不少于8位"
         label="重复密码 :"
       >
         <a-input-password
@@ -64,9 +64,9 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 const form = reactive<UserRegisterRequest>({
-  userAccount: "",
-  userPassword: "",
-  checkPassword: "",
+  userAccount: "links",
+  userPassword: "12345678",
+  checkPassword: "12345678",
 });
 const handleSubmit = async () => {
   if (form.userAccount.length < 4 || form.userPassword.length < 8) {
