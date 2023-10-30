@@ -226,4 +226,7 @@ const onAnswerChange = (value: string) => {
 <style scoped>
 #addQuestionView {
 }
+:deep(.bytemd-fullscreen.bytemd) {
+  z-index: 100;
+}
 </style>
