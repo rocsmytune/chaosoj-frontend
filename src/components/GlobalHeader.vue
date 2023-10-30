@@ -43,19 +43,21 @@ string !== ACCESS_ENUM.NOT_LOGIN"
               </template>
             </template>
             <template v-else>
-              <a-avatar>未登录</a-avatar>
+              <a-avatar>未登陆</a-avatar>
             </template>
           </a-avatar>
           <template #content>
             <template
-              v-if="loginUser && loginUser.userRole as
-string !== ACCESS_ENUM.NOT_LOGIN"
+              v-if="loginUser && loginUser.userRole as string !== ACCESS_ENUM.NOT_LOGIN"
             >
               <a-doption>
                 <template #icon>
                   <icon-idcard />
                 </template>
                 <template #default>
+                  <!--                  <a-anchor-link>-->
+                  <!--                    <div>{{ loginUser.userName }}</div>-->
+                  <!--                  </a-anchor-link>-->
                   <a-anchor-link>个人信息</a-anchor-link>
                 </template>
               </a-doption>
@@ -74,7 +76,15 @@ string !== ACCESS_ENUM.NOT_LOGIN"
                   <icon-user />
                 </template>
                 <template #default>
-                  <a-anchor-link href="/user/login">登录 </a-anchor-link>
+                  <a-anchor-link href="/user/login">登录</a-anchor-link>
+                </template>
+              </a-doption>
+              <a-doption>
+                <template #icon>
+                  <icon-user />
+                </template>
+                <template #default>
+                  <a-anchor-link href="/user/register">注册</a-anchor-link>
                 </template>
               </a-doption>
             </template>
@@ -86,7 +96,7 @@ string !== ACCESS_ENUM.NOT_LOGIN"
 </template>
 
 <script setup lang="ts">
-import { UserControllerService } from "../../generated";
+import { LoginUserVO, UserControllerService } from "../../generated";
 import { routes } from "../router/routes";
 import { useRoute, useRouter } from "vue-router";
 import { computed, ref } from "vue";
@@ -96,7 +106,12 @@ import ACCESS_ENUM from "@/access/accessEnum";
 
 const router = useRouter();
 const store = useStore();
-let loginUser = store.state.user.loginUser;
+
+const loginUser: LoginUserVO = computed(
+  () => store.state.user?.loginUser
+) as LoginUserVO;
+console.log("用户信息", loginUser);
+
 // 展示在菜单的路由数组
 const visibleRoutes = computed(() => {
   return routes.filter((item, index) => {
@@ -130,15 +145,19 @@ setTimeout(() => {
   });
 }, 3000);
 
+// 用户注销
+const logout = () => {
+  UserControllerService.userLogoutUsingPost();
+  // redirect to user/login page
+  // window.location.href = "/user/login";
+  location.reload();
+};
+
+// 切换菜单
 const doMenuClick = (key: string) => {
   router.push({
     path: key,
   });
-};
-
-const logout = () => {
-  UserControllerService.userLogoutUsingPost();
-  location.reload();
 };
 </script>
 
